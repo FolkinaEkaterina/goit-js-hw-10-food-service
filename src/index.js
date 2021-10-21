@@ -2,12 +2,10 @@ import './sass/main.scss';
 import menuTemplate from './templates/menu-template.hbs';
 import menu from './js/menu.json';
 
-const menuContainer = document.querySelector('js-menu');
+const menuContainer = document.querySelector('ul.js-menu');
 const cardsMarkup = createMenuCardsMarkup(menu);
 
 menuContainer.insertAdjacentHTML('beforeend', cardsMarkup);
-
-// menuContainer.addEventListener('click', onMenuContainerClick);
 
 function createMenuCardsMarkup(menu) {
   return menuTemplate(menu);
